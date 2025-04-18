@@ -47,6 +47,17 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Add this middleware before serving static files
+  app.use((req, res, next) => {
+    if (req.url.endsWith('.js')) {
+      res.type('application/javascript');
+    }
+    next();
+  });
+
+  // Then your existing static file serving
+  app.use(express.static('dist'));
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
