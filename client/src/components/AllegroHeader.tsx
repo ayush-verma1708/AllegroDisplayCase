@@ -7,7 +7,7 @@ const AllegroHeader: React.FC = () => {
       <div className="container mx-auto">
         <div className="flex justify-center items-center">
         <img 
-  src={"https://res.cloudinary.com/docmkserp/image/upload/v1744951140/Allegro_Logo_Design_cu62pw.png"} 
+  src="https://res.cloudinary.com/docmkserp/image/upload/v1744951140/Allegro_Logo_Design_cu62pw.png"
   alt="Allegro - Style Always in Trends" 
   className="h-16 md:h-20 w-auto"
   style={{
